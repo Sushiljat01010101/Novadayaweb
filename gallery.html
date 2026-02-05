@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Navodaya Girls Hostel Jaipur | Rooms, Facilities & Amenities</title>
+    <meta name="description" content="View photos of Navodaya Girls Hostel Jaipur. See our comfortable rooms, modern facilities, dining area, study room and security features.">
+    <meta name="keywords" content="girls hostel photos Jaipur, hostel gallery, rooms images, facilities pictures, Navodaya hostel interior">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <strong>Navodaya Girls Hostel</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="amenities.html">Amenities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="page-header">
+        <div class="container">
+            <h1>Photo Gallery</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Gallery</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2>Take a Virtual Tour of Our Hostel</h2>
+                    <p class="lead">Explore our facilities, rooms, and common areas through these visual representations</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Filters -->
+            <div class="row mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-12 text-center">
+                    <div class="gallery-filters">
+                        <button class="btn btn-outline-primary active" data-filter="all">All</button>
+                        <button class="btn btn-outline-primary" data-filter="rooms">Rooms</button>
+                        <button class="btn btn-outline-primary" data-filter="common">Common Areas</button>
+                        <button class="btn btn-outline-primary" data-filter="facilities">Facilities</button>
+                        <button class="btn btn-outline-primary" data-filter="exterior">Exterior</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="row g-4 gallery-grid">
+                <!-- Rooms Gallery -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="rooms" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/single-room.png" alt="Single Room" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Single Room</h5>
+                                <p>Private single occupancy room with modern amenities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="rooms" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/double-room.png" alt="Double Room" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Double Sharing Room</h5>
+                                <p>Comfortable double occupancy rooms with modern amenities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="rooms" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/triple-room.png" alt="Triple Room" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Triple Sharing Room</h5>
+                                <p>Spacious triple occupancy rooms for budget-friendly stay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Common Areas Gallery -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="common" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/tv-lounge.png" alt="TV Lounge" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>TV Lounge</h5>
+                                <p>Relaxing space with TV and comfortable seating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="common" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/dining-hall.png" alt="Dining Hall" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Dining Hall</h5>
+                                <p>Spacious dining area for comfortable meals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="common" data-aos="fade-up" data-aos-delay="600">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/study-room.png" alt="Study Room" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Study Room</h5>
+                                <p>Quiet study area with desks and proper lighting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Facilities Gallery -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="facilities" data-aos="fade-up" data-aos-delay="700">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/kitchen.png" alt="Kitchen" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Modern Kitchen</h5>
+                                <p>Well-equipped kitchen with hygienic food preparation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="facilities" data-aos="fade-up" data-aos-delay="800">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/laundry.png" alt="Laundry" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Laundry Facility</h5>
+                                <p>Professional laundry service area</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="facilities" data-aos="fade-up" data-aos-delay="900">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/security.png" alt="Security" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Security Control Room</h5>
+                                <p>24/7 security monitoring and CCTV surveillance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="facilities" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/gym.png" alt="Gym" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Fitness Center</h5>
+                                <p>Well-equipped gym for fitness enthusiasts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="facilities" data-aos="fade-up" data-aos-delay="1100">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/bathroom.png" alt="Bathroom" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Modern Bathrooms</h5>
+                                <p>Clean and well-maintained bathroom facilities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Exterior Gallery -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/exterior.png" alt="Exterior" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Building Exterior</h5>
+                                <p>Beautiful and well-maintained hostel building</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="exterior" data-aos="fade-up" data-aos-delay="1300">
+                    <div class="gallery-card">
+                        <div class="gallery-image">
+                            <img src="images/gallery/garden.png" alt="Garden" class="img-fluid" style="height: 250px; width: 100%; object-fit: cover;">
+                        </div>
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h5>Garden Area</h5>
+                                <p>Beautiful garden space for relaxation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Virtual Tour Section -->
+    <section class="py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2>Experience Our Hostel</h2>
+                    <p class="lead">These visual representations give you a comprehensive view of our facilities and amenities.</p>
+                    <div class="tour-features">
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-eye text-primary me-2"></i>
+                            <span>Detailed visual tour of all areas</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-home text-success me-2"></i>
+                            <span>Room layouts and interior design</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-users text-info me-2"></i>
+                            <span>Common areas and facilities</span>
+                        </div>
+                        <div class="feature-item mb-3">
+                            <i class="fas fa-shield-alt text-warning me-2"></i>
+                            <span>Security features and safety measures</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="contact.html" class="btn btn-primary me-3">Schedule Visit</a>
+                        <a href="booking.html" class="btn btn-outline-primary">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tour-info">
+                        <div class="info-card">
+                            <h4><i class="fas fa-camera me-2"></i>Gallery Highlights</h4>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-success me-2"></i>12+ detailed room views</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Common area layouts</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Facility demonstrations</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Security arrangements</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Location advantages</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2>Ready to Visit Us?</h2>
+                    <p class="lead mb-0">Schedule a personal visit to experience our facilities firsthand and meet our friendly staff.</p>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <a href="contact.html" class="btn btn-light btn-lg me-3">Schedule Visit</a>
+                    <a href="tel:+919887066664" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-phone me-2"></i>Call
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>Navodaya Girls Hostel</h5>
+                    <p>Providing safe, comfortable, and affordable accommodation for girls in Jaipur since 2015.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="rooms.html" class="text-white-50">Rooms</a></li>
+                        <li><a href="amenities.html" class="text-white-50">Amenities</a></li>
+                        <li><a href="gallery.html" class="text-white-50">Gallery</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2"></i> +91-9887066664</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@navodayagirlshostel.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 46, Tonk Rd, opp. Epip Gate, Mahaveer Colony, Shatabdi Nagar, Sitapura, Jaipur, Rajasthan 302022</li>
+                    </ul>
+                    <div class="mt-3">
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Navodaya Girls Hostel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="sitemap.xml" class="text-white-50 me-3">Sitemap</a>
+                    <a href="#" class="text-white-50">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    
+    <!-- Gallery Filter Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.gallery-filters .btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            item.classList.add('fade-in');
+                        } else {
+                            item.style.display = 'none';
+                            item.classList.remove('fade-in');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>

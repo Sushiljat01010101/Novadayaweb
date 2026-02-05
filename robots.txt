@@ -1,0 +1,63 @@
+# Robots.txt for Navodaya Girls Hostel Website
+# This file tells search engine crawlers which pages to crawl and which to avoid
+
+User-agent: *
+Allow: /
+
+# Allow all pages for better SEO visibility
+Allow: /index.php
+Allow: /about.php
+Allow: /rooms.php
+Allow: /amenities.php
+Allow: /gallery.php
+Allow: /contact.php
+Allow: /booking.php
+
+# Allow CSS and JS files for proper rendering
+Allow: /css/
+Allow: /js/
+
+# Disallow process files and sensitive directories
+Disallow: /process/
+Disallow: /includes/
+Disallow: /logs/
+Disallow: /bookings/
+
+# Disallow temporary and system files
+Disallow: *.tmp
+Disallow: *.log
+Disallow: /admin/
+Disallow: /private/
+
+# Allow images and media files for SEO
+Allow: /images/
+Allow: /media/
+
+# Sitemap location for search engines
+Sitemap: https://navodayagirlshostel.page.gd/sitemap.xml
+
+# Crawl delay (1 second) to be respectful to server resources
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: BadBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

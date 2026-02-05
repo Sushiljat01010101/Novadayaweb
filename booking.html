@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Room - Navodaya Girls Hostel Jaipur | Online Room Booking</title>
+    <meta name="description" content="Book your room at Navodaya Girls Hostel Jaipur online. Choose from single, double or triple sharing AC rooms. Secure booking with instant confirmation.">
+    <meta name="keywords" content="book room girls hostel Jaipur, online booking, room reservation, girls PG booking, hostel admission">
+    
+    <!-- Booking Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ReservationPackage",
+        "name": "Room Booking at Navodaya Girls Hostel",
+        "description": "Book comfortable and safe accommodation for girls in Jaipur",
+        "provider": {
+            "@type": "LodgingBusiness",
+            "name": "Navodaya Girls Hostel",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Jaipur",
+                "addressRegion": "Rajasthan",
+                "addressCountry": "IN"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <strong>Navodaya Girls Hostel</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="amenities.html">Amenities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 active" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="page-header">
+        <div class="container">
+            <h1>Book Your Room</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Booking</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5" data-aos="fade-up">
+                    <h2>Reserve Your Room Today</h2>
+                    <p class="lead">Fill out the booking form below and we'll confirm your reservation within 24 hours</p>
+                </div>
+            </div>
+            
+            <div class="row g-5">
+                <!-- Booking Form -->
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="booking-form-wrapper">
+                        <div class="booking-progress mb-4">
+                            <div class="progress-steps">
+                                <div class="step active">
+                                    <div class="step-number">1</div>
+                                    <div class="step-title">Room Selection</div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-title">Personal Details</div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-title">Confirmation</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Success/Error Messages -->
+                        <div id="booking-alert" class="alert" style="display: none;"></div>
+                        
+                        <form id="booking-form" class="booking-form">
+                            <!-- Step 1: Room Selection -->
+                            <div class="form-step active" id="step-1">
+                                <h4>Step 1: Choose Your Room</h4>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="room_type" class="form-label">Room Type *</label>
+                                        <select class="form-select" id="room_type" name="room_type" required>
+                                            <option value="">Select Room Type</option>
+                                            <option value="double_ac">Double Sharing AC Room - ₹8,000/month</option>
+                                            <option value="double_cooler">Double Sharing Cooler Room - ₹7,500/month</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="check_in" class="form-label">Preferred Check-in Date *</label>
+                                        <input type="date" class="form-control" id="check_in" name="check_in" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="duration" class="form-label">Stay Duration *</label>
+                                        <select class="form-select" id="duration" name="duration" required>
+                                            <option value="">Select Duration</option>
+                                            <option value="3_months">3 Months</option>
+                                            <option value="6_months">6 Months</option>
+                                            <option value="1_year">1 Year</option>
+                                            <option value="2_years">2 Years</option>
+                                            <option value="ongoing">Ongoing (Minimum 3 months)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="room-preview" id="room-preview">
+                                            <p class="text-muted">Select a room type to see details</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-navigation mt-4">
+                                    <button type="button" class="btn btn-primary next-step">Next Step <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 2: Personal Details -->
+                            <div class="form-step" id="step-2">
+                                <h4>Step 2: Personal Information</h4>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label">Age *</label>
+                                        <input type="number" class="form-control" id="age" name="age" min="16" max="35" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="occupation" class="form-label">Occupation *</label>
+                                        <select class="form-select" id="occupation" name="occupation" required>
+                                            <option value="">Select Occupation</option>
+                                            <option value="student">Student</option>
+                                            <option value="working_professional">Working Professional</option>
+                                            <option value="job_seeker">Job Seeker</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="institute_company" class="form-label">Institute/Company Name</label>
+                                        <input type="text" class="form-control" id="institute_company" name="institute_company">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="current_address" class="form-label">Current Address *</label>
+                                        <textarea class="form-control" id="current_address" name="current_address" rows="2" required></textarea>
+                                    </div>
+                                    
+                                    <div class="col-12 mt-4">
+                                        <h5>Guardian Information</h5>
+                                        <p class="text-muted small">Required for verification purposes</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="guardian_name" class="form-label">Guardian Name *</label>
+                                        <input type="text" class="form-control" id="guardian_name" name="guardian_name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="guardian_relation" class="form-label">Relation *</label>
+                                        <select class="form-select" id="guardian_relation" name="guardian_relation" required>
+                                            <option value="">Select Relation</option>
+                                            <option value="father">Father</option>
+                                            <option value="mother">Mother</option>
+                                            <option value="brother">Brother</option>
+                                            <option value="sister">Sister</option>
+                                            <option value="uncle">Uncle</option>
+                                            <option value="aunt">Aunt</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="guardian_phone" class="form-label">Guardian Phone *</label>
+                                        <input type="tel" class="form-control" id="guardian_phone" name="guardian_phone" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="guardian_email" class="form-label">Guardian Email</label>
+                                        <input type="email" class="form-control" id="guardian_email" name="guardian_email">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="special_requirements" class="form-label">Special Requirements</label>
+                                        <textarea class="form-control" id="special_requirements" name="special_requirements" rows="3" placeholder="Any dietary restrictions, medical conditions, or special needs..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-navigation mt-4">
+                                    <button type="button" class="btn btn-outline-secondary prev-step"><i class="fas fa-arrow-left me-2"></i>Previous</button>
+                                    <button type="button" class="btn btn-primary next-step ms-2">Next Step <i class="fas fa-arrow-right ms-2"></i></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Step 3: Confirmation -->
+                            <div class="form-step" id="step-3">
+                                <h4>Step 3: Review & Confirm</h4>
+                                <div class="booking-summary">
+                                    <h5>Booking Summary</h5>
+                                    <div id="summary-content">
+                                        <!-- Summary will be populated by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="terms-conditions mt-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms_accept" name="terms_accept" required>
+                                        <label class="form-check-label" for="terms_accept">
+                                            I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a> and <a href="#" data-bs-toggle="modal" data-bs-target="#policyModal">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="info_accuracy" name="info_accuracy" required>
+                                        <label class="form-check-label" for="info_accuracy">
+                                            I confirm that all information provided is accurate and complete
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-navigation mt-4">
+                                    <button type="button" class="btn btn-outline-secondary prev-step"><i class="fas fa-arrow-left me-2"></i>Previous</button>
+                                    <button type="submit" class="btn btn-success ms-2 btn-lg">
+                                        <i class="fas fa-check me-2"></i>Submit Booking Request
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Booking Summary Sidebar -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="booking-sidebar">
+                        <div class="sidebar-card">
+                            <h5>Need Help?</h5>
+                            <p>Our team is here to assist you with your booking</p>
+                            <div class="contact-options">
+                                <a href="tel:+919887066664" class="btn btn-outline-primary w-100 mb-2">
+                                    <i class="fas fa-phone me-2"></i>Call Us
+                                </a>
+                                <a href="mailto:info@navodayagirlshostel.com" class="btn btn-outline-secondary w-100">
+                                    <i class="fas fa-envelope me-2"></i>Email Us
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h5>Booking Process</h5>
+                            <div class="process-steps">
+                                <div class="process-step">
+                                    <i class="fas fa-edit text-primary"></i>
+                                    <div>
+                                        <strong>1. Fill Form</strong>
+                                        <small>Complete the booking form with your details</small>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <i class="fas fa-phone text-warning"></i>
+                                    <div>
+                                        <strong>2. Verification Call</strong>
+                                        <small>We'll call you within 24 hours to verify</small>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <i class="fas fa-calendar text-success"></i>
+                                    <div>
+                                        <strong>3. Visit & Confirm</strong>
+                                        <small>Schedule a visit to finalize booking</small>
+                                    </div>
+                                </div>
+                                <div class="process-step">
+                                    <i class="fas fa-home text-info"></i>
+                                    <div>
+                                        <strong>4. Move In</strong>
+                                        <small>Complete documentation and move in</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h5>What's Included</h5>
+                            <ul class="included-list">
+                                <li><i class="fas fa-check text-success"></i> Furnished room</li>
+                                <li><i class="fas fa-check text-success"></i> 3 meals per day</li>
+                                <li><i class="fas fa-check text-success"></i> Free WiFi</li>
+                                <li><i class="fas fa-check text-success"></i> 24/7 security</li>
+                                <li><i class="fas fa-check text-success"></i> Laundry service</li>
+                                <li><i class="fas fa-check text-success"></i> Housekeeping</li>
+                                <li><i class="fas fa-check text-success"></i> Power backup</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sidebar-card">
+                            <h5>Payment Information</h5>
+                            <div class="payment-info">
+                                <div class="payment-item">
+                                    <span>Security Deposit:</span>
+                                    <strong>₹5,000</strong>
+                                </div>
+                                <div class="payment-item">
+                                    <span>Admission Fee:</span>
+                                    <strong>₹2,000</strong>
+                                </div>
+                                <div class="payment-item">
+                                    <span>First Month Rent:</span>
+                                    <strong>As per room</strong>
+                                </div>
+                            </div>
+                            <small class="text-muted">Security deposit is fully refundable</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Booking and Payment</h6>
+                    <p>All bookings require advance payment of first month's rent, security deposit, and admission fee. Security deposit is refundable upon checkout with proper notice.</p>
+                    
+                    <h6>2. House Rules</h6>
+                    <p>Residents must follow hostel rules including visitor policies, noise regulations, and safety protocols. Violation of rules may result in termination of stay.</p>
+                    
+                    <h6>3. Notice Period</h6>
+                    <p>Minimum stay is 3 months. One month advance notice is required for vacation. Failure to provide notice may result in forfeiture of security deposit.</p>
+                    
+                    <h6>4. Liability</h6>
+                    <p>The hostel is not responsible for loss or damage to personal belongings. Residents are advised to keep valuables secure.</p>
+                    
+                    <h6>5. Termination</h6>
+                    <p>Management reserves the right to terminate stay in case of misconduct, non-payment, or violation of rules.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal fade" id="policyModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Information Collection</h6>
+                    <p>We collect personal information necessary for booking and accommodation purposes including name, contact details, and guardian information.</p>
+                    
+                    <h6>Data Usage</h6>
+                    <p>Your information is used solely for providing accommodation services, emergency contacts, and communication regarding your stay.</p>
+                    
+                    <h6>Data Protection</h6>
+                    <p>We maintain strict confidentiality of your personal information and do not share it with third parties without consent.</p>
+                    
+                    <h6>Contact</h6>
+                    <p>For any privacy concerns, contact us at info@navodayagirlshostel.com</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>Navodaya Girls Hostel</h5>
+                    <p>Providing safe, comfortable, and affordable accommodation for girls in Jaipur since 2015.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="rooms.html" class="text-white-50">Rooms</a></li>
+                        <li><a href="amenities.html" class="text-white-50">Amenities</a></li>
+                        <li><a href="gallery.html" class="text-white-50">Gallery</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2"></i> +91-9887066664</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@navodayagirlshostel.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 46, Tonk Rd, opp. Epip Gate, Mahaveer Colony, Shatabdi Nagar, Sitapura, Jaipur, Rajasthan 302022</li>
+                    </ul>
+                    <div class="mt-3">
+                        <a href="booking.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Navodaya Girls Hostel. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="sitemap.xml" class="text-white-50 me-3">Sitemap</a>
+                    <a href="#" class="text-white-50">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    
+    <!-- Booking Form Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bookingForm = document.getElementById('booking-form');
+            const steps = document.querySelectorAll('.form-step');
+            const progressSteps = document.querySelectorAll('.progress-steps .step');
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const roomTypeSelect = document.getElementById('room_type');
+            const roomPreview = document.getElementById('room-preview');
+            const bookingAlert = document.getElementById('booking-alert');
+            let currentStep = 0;
+            
+            // Room type data
+            const roomTypes = {
+                'double_ac': {
+                    name: 'Double Sharing AC Room',
+                    price: '₹8,000/month',
+                    features: ['Air Conditioning', 'Shared Bathroom', 'Study Table', 'Wardrobe', 'WiFi', 'Balcony'],
+                    description: 'Comfortable air-conditioned room perfect for study and rest.'
+                },
+                'double_cooler': {
+                    name: 'Double Sharing Cooler Room',
+                    price: '₹7,500/month',
+                    features: ['Air Cooler', 'Shared Bathroom', 'Study Table', 'Wardrobe', 'WiFi', 'Ceiling Fan'],
+                    description: 'Well-ventilated room with cooler, ideal for comfortable living.'
+                }
+            };
+            
+            // Initialize form
+            setMinDate();
+            updateProgress();
+            
+            // Set minimum date to today
+            function setMinDate() {
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('check_in').min = today;
+            }
+            
+            // Room type change handler
+            roomTypeSelect.addEventListener('change', function() {
+                const selectedRoom = this.value;
+                if (selectedRoom && roomTypes[selectedRoom]) {
+                    const room = roomTypes[selectedRoom];
+                    roomPreview.innerHTML = `
+                        <div class="room-preview-card">
+                            <h6>${room.name}</h6>
+                            <div class="price-display">${room.price}</div>
+                            <p class="room-description">${room.description}</p>
+                            <div class="features-list">
+                                ${room.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    roomPreview.innerHTML = '<p class="text-muted">Select a room type to see details</p>';
+                }
+            });
+            
+            // Check for pre-selected room from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const preSelectedRoom = urlParams.get('room');
+            if (preSelectedRoom && roomTypes[preSelectedRoom]) {
+                roomTypeSelect.value = preSelectedRoom;
+                roomTypeSelect.dispatchEvent(new Event('change'));
+            }
+            
+            // Next step handler
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (validateCurrentStep()) {
+                        if (currentStep === 1) {
+                            generateSummary();
+                        }
+                        nextStep();
+                    }
+                });
+            });
+            
+            // Previous step handler
+            prevButtons.forEach(button => {
+                button.addEventListener('click', prevStep);
+            });
+            
+            // Form submission
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateCurrentStep()) {
+                    submitBooking();
+                }
+            });
+            
+            function validateCurrentStep() {
+                const currentStepElement = steps[currentStep];
+                const requiredFields = currentStepElement.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        field.classList.remove('is-invalid');
+                        
+                        // Email validation
+                        if (field.type === 'email') {
+                            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                            if (!emailRegex.test(field.value)) {
+                                field.classList.add('is-invalid');
+                                isValid = false;
+                            }
+                        }
+                        
+                        // Phone validation
+                        if (field.type === 'tel') {
+                            const phoneRegex = /^[6-9]\d{9}$/;
+                            if (!phoneRegex.test(field.value.replace(/\D/g, '').slice(-10))) {
+                                field.classList.add('is-invalid');
+                                isValid = false;
+                            }
+                        }
+                    }
+                });
+                
+                if (!isValid) {
+                    showMessage('Please fill in all required fields correctly.', 'danger');
+                }
+                
+                return isValid;
+            }
+            
+            function nextStep() {
+                if (currentStep < steps.length - 1) {
+                    steps[currentStep].classList.remove('active');
+                    currentStep++;
+                    steps[currentStep].classList.add('active');
+                    updateProgress();
+                }
+            }
+            
+            function prevStep() {
+                if (currentStep > 0) {
+                    steps[currentStep].classList.remove('active');
+                    currentStep--;
+                    steps[currentStep].classList.add('active');
+                    updateProgress();
+                }
+            }
+            
+            function updateProgress() {
+                progressSteps.forEach((step, index) => {
+                    if (index <= currentStep) {
+                        step.classList.add('active');
+                    } else {
+                        step.classList.remove('active');
+                    }
+                });
+            }
+            
+            function generateSummary() {
+                const formData = new FormData(bookingForm);
+                const roomType = formData.get('room_type');
+                const room = roomTypes[roomType];
+                
+                const summaryHTML = `
+                    <div class="summary-section">
+                        <h6>Room Details</h6>
+                        <p><strong>Room Type:</strong> ${room.name}</p>
+                        <p><strong>Monthly Rent:</strong> ${room.price}</p>
+                        <p><strong>Check-in Date:</strong> ${formData.get('check_in')}</p>
+                        <p><strong>Duration:</strong> ${formData.get('duration').replace('_', ' ')}</p>
+                    </div>
+                    <div class="summary-section">
+                        <h6>Personal Information</h6>
+                        <p><strong>Name:</strong> ${formData.get('name')}</p>
+                        <p><strong>Email:</strong> ${formData.get('email')}</p>
+                        <p><strong>Phone:</strong> ${formData.get('phone')}</p>
+                        <p><strong>Age:</strong> ${formData.get('age')}</p>
+                        <p><strong>Occupation:</strong> ${formData.get('occupation')}</p>
+                    </div>
+                    <div class="summary-section">
+                        <h6>Guardian Information</h6>
+                        <p><strong>Guardian:</strong> ${formData.get('guardian_name')} (${formData.get('guardian_relation')})</p>
+                        <p><strong>Guardian Phone:</strong> ${formData.get('guardian_phone')}</p>
+                    </div>
+                `;
+                
+                document.getElementById('summary-content').innerHTML = summaryHTML;
+            }
+            
+            async function submitBooking() {
+                const submitBtn = bookingForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Submitting...';
+                submitBtn.disabled = true;
+                
+                try {
+                    // Collect form data
+                    const formData = new FormData(bookingForm);
+                    const roomTypeKey = formData.get('room_type');
+                    const selectedRoom = roomTypes[roomTypeKey];
+                    
+                    // Generate booking ID
+                    const bookingId = 'NGH' + new Date().getFullYear() + 
+                                     String(new Date().getMonth() + 1).padStart(2, '0') + 
+                                     String(new Date().getDate()).padStart(2, '0') + 
+                                     Math.floor(Math.random() * 10000);
+                    
+                    // Prepare booking data
+                    const bookingData = {
+                        bookingId: bookingId,
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        phone: formData.get('phone'),
+                        age: formData.get('age'),
+                        occupation: formData.get('occupation'),
+                        instituteCompany: formData.get('institute_company'),
+                        currentAddress: formData.get('current_address'),
+                        guardianName: formData.get('guardian_name'),
+                        guardianRelation: formData.get('guardian_relation'),
+                        guardianPhone: formData.get('guardian_phone'),
+                        guardianEmail: formData.get('guardian_email'),
+                        roomType: selectedRoom ? selectedRoom.name : formData.get('room_type'),
+                        checkIn: formData.get('check_in'),
+                        duration: formData.get('duration'),
+                        specialRequirements: formData.get('special_requirements'),
+                        totalAmount: selectedRoom ? selectedRoom.price.replace('₹', '').replace('/month', '') : 'TBD',
+                        submittedAt: new Date().toISOString()
+                    };
+                    
+                    // Save booking locally
+                    const bookingJson = JSON.stringify(bookingData, null, 2);
+                    console.log('Booking Data:', bookingData);
+                    
+                    // Send to Telegram
+                    const telegramResult = await telegramBot.sendBookingNotification(bookingData);
+                    
+                    if (telegramResult.success) {
+                        showMessage('Booking request submitted successfully! We\'ll contact you within 24 hours to confirm your booking.', 'success');
+                    } else {
+                        showMessage('Booking submitted locally but notification failed. Our team will still review your request.', 'warning');
+                    }
+                    
+                    // Reset form
+                    bookingForm.reset();
+                    roomPreview.innerHTML = '<p class="text-muted">Select a room type to see details</p>';
+                    
+                    // Reset to first step
+                    steps[currentStep].classList.remove('active');
+                    currentStep = 0;
+                    steps[currentStep].classList.add('active');
+                    updateProgress();
+                    
+                } catch (error) {
+                    console.error('Booking submission error:', error);
+                    showMessage('There was an error submitting your booking. Please try again or contact us directly.', 'danger');
+                } finally {
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+            
+            function showMessage(message, type) {
+                bookingAlert.className = `alert alert-${type}`;
+                bookingAlert.textContent = message;
+                bookingAlert.style.display = 'block';
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    bookingAlert.style.display = 'none';
+                }, 5000);
+                
+                // Scroll to message
+                bookingAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+    </script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    
+    <!-- Telegram Configuration -->
+    <script src="config.js"></script>
+    <!-- Telegram Bot Integration -->
+    <script src="js/telegram.js"></script>
+</body>
+</html>
