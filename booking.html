@@ -472,10 +472,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Telegram Configuration -->
-    <script src="config.js"></script>
-    <!-- Telegram Bot Integration -->
-    <script src="js/telegram.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
     
     <!-- Booking Form Script -->
     <script>
@@ -719,18 +717,19 @@
                     
                     if (telegramResult.success) {
                         showMessage('Booking request submitted successfully! We\'ll contact you within 24 hours to confirm your booking.', 'success');
-                        // Reset form
-                        bookingForm.reset();
-                        roomPreview.innerHTML = '<p class="text-muted">Select a room type to see details</p>';
-                        
-                        // Reset to first step
-                        steps[currentStep].classList.remove('active');
-                        currentStep = 0;
-                        steps[currentStep].classList.add('active');
-                        updateProgress();
                     } else {
                         showMessage('Booking submitted locally but notification failed. Our team will still review your request.', 'warning');
                     }
+                    
+                    // Reset form
+                    bookingForm.reset();
+                    roomPreview.innerHTML = '<p class="text-muted">Select a room type to see details</p>';
+                    
+                    // Reset to first step
+                    steps[currentStep].classList.remove('active');
+                    currentStep = 0;
+                    steps[currentStep].classList.add('active');
+                    updateProgress();
                     
                 } catch (error) {
                     console.error('Booking submission error:', error);
@@ -760,5 +759,18 @@
             }
         });
     </script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    
+    <!-- Telegram Configuration -->
+    <script src="config.js"></script>
+    <!-- Telegram Bot Integration -->
+    <script src="js/telegram.js"></script>
 </body>
 </html>
